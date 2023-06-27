@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wine Details</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Wine Details</h1>
+  <h2><%= wine.name %></h2>
+  <p>Type: <%= wine.type %></p>
+  <p>Origin: <%= wine.origin %></p>
+
+  <a href="/wines/<%= wineIndex %>/edit">Edit Wine</a>
+  <form action="/wines/<%= wineIndex %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Wine</button>
+  </form>
+</body>
+</html>

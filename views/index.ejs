@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wines App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Wines</h1>
+  <ul>
+    <% wines.forEach((wine, index) => { %>
+      <li>
+        <h3><%= wine.name %></h3>
+        <p>Type: <%= wine.type %></p>
+        <p>Origin: <%= wine.origin %></p>
+        <a href="/wines/<%= index %>">View Details</a>
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/wines/new">Add New Wine</a>
+</body>
+</html>
